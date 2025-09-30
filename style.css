@@ -1,0 +1,139 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(135deg, rgb(255, 255, 255), #ffffff);
+    color: white;
+    overflow: hidden;
+    background-image: url(Sem\ Título-1.jpg);
+
+}
+
+.logo {
+    position: fixed;
+    width: 1100px; /* Define a largura máxima da logo */
+    height: auto;     /* Mantém a proporção da imagem */
+    margin-bottom: 200px; /* Cria um espaço abaixo da logo */
+    margin-top: -400px;
+    margin-left: -540px;
+}
+
+.roleta1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    font-size: 35px;
+    margin-bottom: 5rem;
+}
+
+
+
+.container {
+    background-color: rgba(27,37,59,255);
+    width: 600x;
+    padding: 800px 350px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    max-width: 90%;
+    transform: scale(0.95);
+    transition: transform 0.3s ease-in-out;
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.wheel-container {
+    position: relative;
+    width: 900px;
+    height: 900px;
+    margin: 30px auto;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5), 0 0 20px rgba(0, 0, 0, 0.8);
+    background-color: #333;
+}
+
+#wheel {
+    width: 100%;
+    height: 100%;
+    transition: transform 4s cubic-bezier(0.25, 0.1, 0, 1); /* Curva de aceleração para a parada */
+}
+
+.pointer {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-top: 60px solid #ffffff;
+    z-index: 10;
+}
+
+#spinBtn {
+    background-color: #ffcc00;
+    color: #333;
+    border: none;
+    width: 22rem;
+    padding: 30px 40px;
+    font-size: 2rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;    
+    color: #1b253b;
+}
+
+
+#spinBtn:hover {
+    background-color: #e6b800;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+#spinBtn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+.result {
+    margin-top: 40px;
+    font-size: 2em;
+    font-weight: bold;
+    color: #ffffff;
+    min-height: 1.5em; /* Garante espaço mesmo sem resultado */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .container {
+        padding: 30px;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    .wheel-container {
+        width: 300px;
+        height: 300px;
+    }
+    #spinBtn {
+        padding: 12px 30px;
+        font-size: 1.2em;
+    }
+    .result {
+        font-size: 1.5em;
+    }
+}
